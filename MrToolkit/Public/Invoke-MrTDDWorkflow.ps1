@@ -1,6 +1,36 @@
 ﻿#Requires -Version 4.0 -Modules Pester
 function Invoke-MrTDDWorkflow {
 
+<#
+.SYNOPSIS
+    Implements a Test-Driven Development (TDD) workflow using Pester tests.
+
+.DESCRIPTION
+    The Invoke-MrTDDWorkflow function runs Pester tests in a specified directory and guides the
+    user through a TDD workflow. The user is prompted to write failing unit tests and then write
+    code to pass those tests. The process continues until the user indicates that the code is
+    complete.
+
+.PARAMETER Path
+    The directory containing the Pester test scripts. This parameter must be a valid directory
+    path. Defaults to the current directory.
+
+.PARAMETER Seconds
+    The number of seconds to wait between test runs when there are failing tests. Defaults to 30
+    seconds.
+
+.EXAMPLE
+    Invoke-MrTDDWorkflow
+
+.EXAMPLE
+    Invoke-MrTDDWorkflow -Path C:\Tests -Seconds 15
+
+.NOTES
+    Author:  Mike F. Robbins
+    Website: https://mikefrobbins.com
+    Twitter: @mikefrobbins
+#>
+
     [CmdletBinding()]
     param (
         [ValidateScript({
