@@ -29,8 +29,8 @@ function Get-MSPSUGMeetingDate {
 .OUTPUTS
     PSCustomObject
 .NOTES
-    Written by Mike F Robbins
-    Blog: http://mikefrobbins.com
+    Author:  Mike F. Robbins
+    Website: https://mikefrobbins.com
     Twitter: @mikefrobbins
 #>
     [CmdletBinding()]
