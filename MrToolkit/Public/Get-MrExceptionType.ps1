@@ -1,5 +1,37 @@
 ﻿function Get-MrExceptionType {
 
+<#
+.SYNOPSIS
+    Retrieves the exception types from the most recent errors in the current PowerShell session.
+
+.DESCRIPTION
+    The Get-MrExceptionType function examines the $Error automatic variable and retrieves the
+    exception types for the specified number of most recent errors. If no errors have occurred, it
+    will display a warning message.The function defaults to retrieving the most recent error if the
+    count is not specified.
+
+.PARAMETER Count
+    The number of recent errors to retrieve exception types for. Must be between 1 and 256.
+    Defaults to 1.
+
+.EXAMPLE
+    Get-MrExceptionType
+
+.EXAMPLE
+    Get-MrExceptionType -Count 5
+
+.INPUTS
+    None
+
+.OUTPUTS
+    PSCustomObject
+
+.NOTES
+    Author:  Mike F. Robbins
+    Website: https://mikefrobbins.com
+    Twitter: @mikefrobbins
+#>
+
     [CmdletBinding()]
     param (
         [ValidateRange(1,256)]
