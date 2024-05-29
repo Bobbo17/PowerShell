@@ -27,8 +27,8 @@ function Get-MrOSInfo {
     PSCustomObject
  
 .NOTES
-    Author:  Mike F Robbins
-    Website: http://mikefrobbins.com
+    Author:  Mike F. Robbins
+    Website: https://mikefrobbins.com
     Twitter: @mikefrobbins
 #>
 

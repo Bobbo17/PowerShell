@@ -25,8 +25,8 @@ function Get-MrUptime {
     Selected.Microsoft.Management.Infrastructure.CimInstance
  
 .NOTES
-    Author:  Mike F Robbins
-    Website: http://mikefrobbins.com
+    Author:  Mike F. Robbins
+    Website: https://mikefrobbins.com
     Twitter: @mikefrobbins
 #>
 
